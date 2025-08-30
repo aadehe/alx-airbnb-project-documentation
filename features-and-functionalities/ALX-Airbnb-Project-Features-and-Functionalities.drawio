@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Airbnb Clone Backend (Comprehensive)">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Top: Gateway & Security -->
+        <mxCell id="api" value="API Gateway&#10;(REST/GraphQL, Rate Limiting, Validation)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#cfe2f3;strokeColor=#6c8ebf;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="600" y="20" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="auth" value="Auth Service&#10;(JWT, Refresh Tokens, OAuth, RBAC)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#6aa84f" vertex="1" parent="1">
+          <mxGeometry x="900" y="20" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="logging" value="Logging &amp; Monitoring&#10;(Centralized Logs, Metrics, Alerts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ead1dc;strokeColor=#a64d79" vertex="1" parent="1">
+          <mxGeometry x="1200" y="20" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Row 2: Core Domain Modules -->
+        <mxCell id="users" value="Users&#10;(Registration, Login, Profiles, Roles)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="100" y="140" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="properties" value="Properties&#10;(Listings, Images, Amenities, Availability)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="360" y="140" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="search" value="Search &amp; Filtering&#10;(Location, Price, Guests, Amenities, Pagination, Caching)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656" vertex="1" parent="1">
+          <mxGeometry x="660" y="140" width="320" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="bookings" value="Bookings&#10;(Create, Prevent Double-Booking, Status: pending/confirmed/canceled/completed)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf" vertex="1" parent="1">
+          <mxGeometry x="1020" y="140" width="360" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Row 3: More Features -->
+        <mxCell id="payments" value="Payments&#10;(Charges, Refunds, Payouts, Multi-Currency)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#6aa84f" vertex="1" parent="1">
+          <mxGeometry x="100" y="300" width="260" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="reviews" value="Reviews&#10;(1–5 Stars, Text Comments, Moderation)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#6aa84f" vertex="1" parent="1">
+          <mxGeometry x="380" y="300" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="messages" value="Messages&#10;(Guest ↔ Host, Threads, Timestamps)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#6aa84f" vertex="1" parent="1">
+          <mxGeometry x="660" y="300" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="notifications" value="Notifications&#10;(Email, In-App, Templates)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#6aa84f" vertex="1" parent="1">
+          <mxGeometry x="940" y="300" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="admin" value="Admin Dashboard&#10;(Users, Properties, Bookings, Payments, Moderation)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9ead3;strokeColor=#6aa84f" vertex="1" parent="1">
+          <mxGeometry x="1220" y="300" width="280" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Row 4: Data & Infra -->
+        <mxCell id="database" value="Database&#10;(PostgreSQL/MySQL, Relational Schema, FKs, Indexes)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1" vertex="1" parent="1">
+          <mxGeometry x="660" y="520" width="320" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="storage" value="File Storage&#10;(Property Images, Profile Photos)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138" vertex="1" parent="1">
+          <mxGeometry x="380" y="520" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="email" value="Email Service&#10;(SendGrid/Mailgun)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138" vertex="1" parent="1">
+          <mxGeometry x="1020" y="520" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="paymentgw" value="Payment Gateway&#10;(Stripe/PayPal)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce5cd;strokeColor=#e69138" vertex="1" parent="1">
+          <mxGeometry x="1240" y="520" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="cache" value="Cache&#10;(Redis: Search Results, Sessions, Rate Limits)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#cc0000" vertex="1" parent="1">
+          <mxGeometry x="120" y="520" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="searchIndex" value="Search Index&#10;(Elasticsearch/Meilisearch)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f4cccc;strokeColor=#cc0000" vertex="1" parent="1">
+          <mxGeometry x="660" y="420" width="320" height="80" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="scheduler" value="Scheduler / Jobs&#10;(Reminders, Payouts, Cleanup)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6" vertex="1" parent="1">
+          <mxGeometry x="120" y="300" width="240" height="80" as="geometry"/>
+        </mxCell>
+
+        <!-- Connections: API to Modules -->
+        <mxCell id="e_api_users" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="users">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_api_properties" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="properties">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_api_search" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="search">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_api_bookings" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="bookings">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_api_payments" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="payments">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_api_reviews" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="reviews">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_api_messages" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="messages">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_api_notifications" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="notifications">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_api_admin" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="api" target="admin">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Auth connections -->
+        <mxCell id="e_auth_api" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="auth" target="api">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_auth_users" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="auth" target="users">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Modules to Database -->
+        <mxCell id="e_users_db" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="users" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_properties_db" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="properties" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_search_db" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="search" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_bookings_db" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="bookings" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_payments_db" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="payments" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_reviews_db" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="reviews" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_messages_db" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="messages" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_notifications_db" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="notifications" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_admin_db" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="admin" target="database">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- File Storage & Media -->
+        <mxCell id="e_users_storage" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="users" target="storage">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_properties_storage" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="properties" target="storage">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Payments & Gateways -->
+        <mxCell id="e_payments_gateway" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="payments" target="paymentgw">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Notifications & Email -->
+        <mxCell id="e_notifications_email" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="notifications" target="email">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Search: Index and Cache -->
+        <mxCell id="e_search_index" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="search" target="searchIndex">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_search_cache" style="endArrow=block;html=1;strokeColor=#000000;" edge="1" parent="1" source="search" target="cache">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <!-- Keep index in sync from properties -->
+        <mxCell id="e_properties_index" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="properties" target="searchIndex">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Scheduler Jobs -->
+        <mxCell id="e_scheduler_bookings" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="scheduler" target="bookings">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_scheduler_payments" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="scheduler" target="payments">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_scheduler_notifications" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="scheduler" target="notifications">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Admin management links -->
+        <mxCell id="e_admin_users" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="admin" target="users">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_admin_properties" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="admin" target="properties">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_admin_bookings" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="admin" target="bookings">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e_admin_payments" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="admin" target="payments">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+        <!-- Observability -->
+        <mxCell id="e_logging_api" style="endArrow=block;html=1;strokeColor=#000000;dashed=1" edge="1" parent="1" source="api" target="logging">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
