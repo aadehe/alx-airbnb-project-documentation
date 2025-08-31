@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net">
+  <diagram name="Property Booking Flow">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Start -->
+        <mxCell id="start" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="100" y="40" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Step 1: Guest selects property -->
+        <mxCell id="s1" value="Guest selects property &amp; dates" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="120" width="220" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Step 2: Check availability -->
+        <mxCell id="s2" value="Check property availability" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="200" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Step 3: If not available -->
+        <mxCell id="s3" value="Show error: Not available" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="360" y="200" width="200" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Step 4: Create booking -->
+        <mxCell id="s4" value="Create booking record (pending)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Step 5: Process payment -->
+        <mxCell id="s5" value="Process payment" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Step 6: Payment successful? -->
+        <mxCell id="s6" value="Payment successful?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="80" y="500" width="200" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Step 7a: Success -->
+        <mxCell id="s7a" value="Update booking status to Confirmed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="80" y="600" width="260" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- Step 7b: Failure -->
+        <mxCell id="s7b" value="Cancel booking &amp; notify guest" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;" vertex="1" parent="1">
+          <mxGeometry x="360" y="500" width="240" height="60" as="geometry"/>
+        </mxCell>
+
+        <!-- End -->
+        <mxCell id="end" value="End" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;" vertex="1" parent="1">
+          <mxGeometry x="160" y="700" width="100" height="40" as="geometry"/>
+        </mxCell>
+
+        <!-- Edges with proper arrow style -->
+        <mxCell id="e1" edge="1" parent="1" source="start" target="s1" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="s1" target="s2" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e3" value="No" edge="1" parent="1" source="s2" target="s3" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e4" value="Yes" edge="1" parent="1" source="s2" target="s4" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="s4" target="s5" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="s5" target="s6" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e7" value="Yes" edge="1" parent="1" source="s6" target="s7a" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e8" value="No" edge="1" parent="1" source="s6" target="s7b" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="s7a" target="end" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="s7b" target="end" style="orthogonalEdgeStyle;endArrow=block;html=1;strokeColor=#000000;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
